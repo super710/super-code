@@ -64,30 +64,30 @@ public class offer_07 {
        if (preorder==null||preorder.length==0)
            return null;
        TreeNode root=new TreeNode(preorder[0]);
-       int preLen=preorder.length;
        Stack<TreeNode> stack=new Stack<>();
        stack.push(root);
        int inorIndex=0;
-       for (int i=1;i<preLen;i++){
+       for(int i=1;i<preorder.length;i++){
            int preVal=preorder[i];
            TreeNode node=stack.peek();
-
            if (node.val!=inorder[inorIndex]){
                node.left=new TreeNode(preVal);
                stack.push(node.left);
-           }else{
+           }
+           else{
                while(!stack.isEmpty()&&stack.peek().val==inorder[inorIndex]){
                    node=stack.pop();
                    inorIndex++;
                }
                node.right=new TreeNode(preVal);
                stack.push(node.right);
+
            }
+
 
        }
 
         return root;
-
     }
 
 
