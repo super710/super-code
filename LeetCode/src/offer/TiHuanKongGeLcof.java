@@ -26,6 +26,7 @@ public class TiHuanKongGeLcof {
         return stringBuilder.toString();
     }
 
+
     public static void main(String[] args) {
 
         System.out.println(replaceSpace("We are happy."));
