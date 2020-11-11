@@ -45,6 +45,7 @@ public class CongWeiDaoTouDaYinLianBiaoLcof {
         return val;
     }
 
+    
     public static void main(String[] args) {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(3);
