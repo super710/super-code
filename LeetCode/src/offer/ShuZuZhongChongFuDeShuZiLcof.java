@@ -34,6 +34,7 @@ public class ShuZuZhongChongFuDeShuZiLcof {
         return -1;
     }
 
+    
     public static void main(String[] args) {
 
         System.out.println(findRepeatNumber(new int[]{2, 3, 1, 0, 2, 5, 3}));
