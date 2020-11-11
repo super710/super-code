@@ -25,7 +25,7 @@ public class AddTwoNumbers {
         }
     }
     /**
-     * 3.两数相加
+     * 2.两数相加
      */
 
     /**
@@ -99,6 +99,7 @@ public class AddTwoNumbers {
         }
         return l3;
     }
+
 
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
