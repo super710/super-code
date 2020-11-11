@@ -41,6 +41,7 @@ class CQueue {
 
 public class YongLiangGeZhanShiXianDuiLieLlcof {
 
+    
     public static void main(String[] args) {
         CQueue cQueue = new CQueue();
         cQueue.appendTail(5);
