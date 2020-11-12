@@ -63,31 +63,33 @@ public class offer_07 {
     public TreeNode buildTree2(int[] preorder,int[] inorder){
        if (preorder==null||preorder.length==0)
            return null;
-       TreeNode root=new TreeNode(preorder[0]);
+
        Stack<TreeNode> stack=new Stack<>();
+       TreeNode root=new TreeNode(preorder[0]);
        stack.push(root);
-       int inorIndex=0;
-       for(int i=1;i<preorder.length;i++){
+
+       int inoIndex=0;
+       for (int i=1;i<preorder.length;i++){
            int preVal=preorder[i];
-           TreeNode node=stack.peek();
-           if (node.val!=inorder[inorIndex]){
+
+           if (stack.peek().val!=inorder[inoIndex]){
+               TreeNode node=stack.peek();
                node.left=new TreeNode(preVal);
                stack.push(node.left);
-           }
-           else{
-               while(!stack.isEmpty()&&stack.peek().val==inorder[inorIndex]){
+           }else{
+               TreeNode node=new TreeNode(0);
+               while(!stack.isEmpty()&&stack.peek().val==inorder[inoIndex]){
                    node=stack.pop();
-                   inorIndex++;
+                   inoIndex++;
                }
                node.right=new TreeNode(preVal);
                stack.push(node.right);
-
            }
 
 
        }
-
         return root;
+
     }
 
 
