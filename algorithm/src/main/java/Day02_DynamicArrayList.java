@@ -1,13 +1,11 @@
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Arrays;
-
 /**
  * @author Tiger
  * @date 2020/11/10 17:15
  */
 @Slf4j(topic = "c.Day02_DynamicArray")
-public class Day02_DynamicArray<E> {
+public class Day02_DynamicArrayList<E> {
     /**
      * 元素的数量
      */
@@ -21,11 +19,11 @@ public class Day02_DynamicArray<E> {
 
     private static final int ELEMENT_NOT_FOUND = -1;
 
-    private Day02_DynamicArray() {
+    private Day02_DynamicArrayList() {
         this(DEFAULT_CAPACITY);
     }
 
-    private Day02_DynamicArray(int capacity) {
+    private Day02_DynamicArrayList(int capacity) {
         if (capacity <= DEFAULT_CAPACITY) {
             capacity = DEFAULT_CAPACITY;
         }
@@ -202,7 +200,7 @@ public class Day02_DynamicArray<E> {
     }
 
     public static void main(String[] args) {
-        Day02_DynamicArray<Integer> dynamicArray = new Day02_DynamicArray<>();
+        Day02_DynamicArrayList<Integer> dynamicArray = new Day02_DynamicArrayList<>();
         dynamicArray.add(1);
         dynamicArray.add(2);
         dynamicArray.add(3);
