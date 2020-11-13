@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/algorithm/pom.xml" />
         <option value="$PROJECT_DIR$/synchronousCode/pom.xml" />
+        <option value="$PROJECT_DIR$/leetcode/pom.xml" />
       </list>
     </option>
   </component>

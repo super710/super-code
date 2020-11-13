@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2020/11/10 17:15
  */
 @Slf4j(topic = "c.Day02_DynamicArray")
-public class Day02_DynamicArrayList<E> {
+public class Day02_DynamicArrayList<E> extends AbstractList<E> {
     /**
      * 元素的数量
      */
@@ -17,7 +17,6 @@ public class Day02_DynamicArrayList<E> {
 
     private static final int DEFAULT_CAPACITY = 10;
 
-    private static final int ELEMENT_NOT_FOUND = -1;
 
     private Day02_DynamicArrayList() {
         this(DEFAULT_CAPACITY);
@@ -28,22 +27,6 @@ public class Day02_DynamicArrayList<E> {
             capacity = DEFAULT_CAPACITY;
         }
         elements = new Object[capacity];
-    }
-
-    private void outOfBounds(int index) {
-        throw new IndexOutOfBoundsException("Index: " + index + " , Size: " + size);
-    }
-
-    private void rangeCheck(int index) {
-        if (index < 0 || index >= size) {
-            outOfBounds(index);
-        }
-    }
-
-    private void rangeCheckForAdd(int index) {
-        if (index < 0 || index > size) {
-            outOfBounds(index);
-        }
     }
 
     /**
