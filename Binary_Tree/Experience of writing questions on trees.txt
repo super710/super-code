@@ -1,0 +1,8 @@
+1:有关叶子节点的终止条件为root.Left == nil && root.Right == nil
+2：有关左叶子节点的终止条件为：root.Left != nil && root.Left.Let == nil && root.Left.Right == nil
+3: 右叶子节点与上类似
+
+如何做树的题目：
+1：明确递归终止的条件
+2：终止条件内需要完成什么
+3：递归的方式是什么
