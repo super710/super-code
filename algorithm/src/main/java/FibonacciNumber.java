@@ -2,7 +2,7 @@
  * @author Tiger
  * @date 2020/11/10 17:01
  */
-public class Day01_FibonacciNumber {
+public class FibonacciNumber {
     /**
      * F(0) = 0,   F(1) = 1
      * F(N) = F(N - 1) + F(N - 2), 其中 N > 1.

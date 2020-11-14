@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 选择算法 平局时间复杂度O(n^2)  最好时间复杂度O(n^2) 最坏时间复杂度O(n^2)
  */
 @Slf4j(topic = "c.Day03_SelectSort")
-public class Day03_SelectSort {
+public class SelectSort {
 
     private static int[] ints = new int[]{2, 1, 5, 0, 4, 7, 8, 9};
 

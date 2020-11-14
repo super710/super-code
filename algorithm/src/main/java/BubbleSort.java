@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 冒泡算法 平局时间复杂度O(n^2)  最好时间复杂度O(n) 最坏时间复杂度O(n^2)
  */
 @Slf4j(topic = "c.Day03_BubbleSort")
-public class Day03_BubbleSort {
+public class BubbleSort {
 
     private static int[] ints = new int[]{2, 1, 5, 0, 4, 7, 8, 9};
 
