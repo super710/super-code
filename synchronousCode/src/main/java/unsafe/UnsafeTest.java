@@ -1,14 +1,12 @@
+package unsafe;
+
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
 import sun.misc.Unsafe;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.stream.IntStream;
 
 /**
  * @author Tiger
@@ -20,7 +18,7 @@ public class UnsafeTest {
         field.setAccessible(true);
         Unsafe unsafe = (Unsafe) field.get(null);
         //只会给对象分配内存，并不会调用构造方法 此时user里的name为null
-//        User user = (User) unsafe.allocateInstance(User.class);
+//        unsafe.User user = (unsafe.User) unsafe.allocateInstance(unsafe.User.class);
 
         User user = new User();
         System.out.println(user);
@@ -47,7 +45,7 @@ class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "unsafe.User{" +
                 "name='" + name + '\'' +
                 '}';
     }

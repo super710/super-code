@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2020/11/12 10:52
  */
 @Slf4j(topic = "c.Day04_LinkedList")
-public class Day04_LinkedList<E> extends AbstractList<E> {
+public class LinkedList<E> extends AbstractList<E> {
 
     Node<E> first;
 
@@ -111,7 +111,7 @@ public class Day04_LinkedList<E> extends AbstractList<E> {
     }
 
     public static void main(String[] args) {
-        Day04_LinkedList<Integer> day04LinkedList = new Day04_LinkedList<>();
+        LinkedList<Integer> day04LinkedList = new LinkedList<>();
         day04LinkedList.remove(0);
 //        day04LinkedList.add(1);
 //        day04LinkedList.add(2);

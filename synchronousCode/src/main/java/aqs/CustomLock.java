@@ -1,10 +1,10 @@
+package aqs;
+
 import lombok.NoArgsConstructor;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.stream.IntStream;
 
 /**
@@ -18,6 +18,9 @@ public class CustomLock {
     private static Long stateOffset;
     private static Long tailOffset;
     private static Unsafe unsafe;
+    private volatile Node head;
+    private volatile Node tail;
+    private final Node EMPTY = new Node();
 
     static {
         try {
@@ -44,10 +47,6 @@ public class CustomLock {
             this.currentThread = currentThread;
         }
     }
-
-    private volatile Node head;
-    private volatile Node tail;
-    private final Node EMPTY = new Node();
 
     public CustomLock() {
         head = tail = EMPTY;

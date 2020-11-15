@@ -1,3 +1,5 @@
+package unsafe;
+
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import sun.misc.Unsafe;
@@ -9,7 +11,7 @@ import java.lang.reflect.Field;
  * @author Tiger
  * @date 2020/11/12 9:00
  */
-@Slf4j(topic = "c.ClazzInstance")
+@Slf4j(topic = "c.unsafe.ClazzInstance")
 public class ClazzInstance {
     //类的实例化方式
     public static void main(String[] args) throws Exception {
