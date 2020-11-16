@@ -1,6 +1,5 @@
 package Binary_Tree
 
-
 /**
 思路很清晰，从根节点到叶子节点，因此递归终止的条件就是，sum==root.Val
  */
