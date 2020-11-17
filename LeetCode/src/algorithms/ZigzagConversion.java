@@ -43,7 +43,7 @@ public class ZigzagConversion {
     }
 
     /**
-     * 寻找字符串输出规律，12321232123···等，在第一行和最后一行变换输出方向，将每一行的
+     * 寻找字符串输出规律，原字符串的对应的行号是12321232123···等，在第一行和最后一行变换输出方向，将每一行的
      * 字符进行拼接，最后将所有行进行拼接输出，时间复杂度为o(n)
      */
     public static String convert1(String s, int numRows) {
