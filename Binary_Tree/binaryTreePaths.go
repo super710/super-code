@@ -9,8 +9,7 @@ package Binary_Tree
 具体思路：
 确定递归终止的条件：叶子节点或则为空
 具体做什么： 完成拼接，加入切片
- */
-
+*/
 
 import "strconv"
 func binaryTreePaths(root *TreeNode) []string {
@@ -22,7 +21,7 @@ func binaryTreePaths(root *TreeNode) []string {
 	return arr
 }
 
-func dfsbTP(node *TreeNode, arr *[]string, str string ) {
+func dfsbTP(node *TreeNode, arr *[]string, str string) {
 	if node == nil {
 		return
 	}
@@ -30,6 +29,6 @@ func dfsbTP(node *TreeNode, arr *[]string, str string ) {
 		str += strconv.Itoa(node.Val)
 		*arr = append(*arr, str)
 	}
-	dfsbTP(node.Left, arr, str + strconv.Itoa(node.Val)+"->")
-	dfsbTP(node.Right, arr,str + strconv.Itoa(node.Val)+"->")
+	dfsbTP(node.Left, arr, str+strconv.Itoa(node.Val)+"->")
+	dfsbTP(node.Right, arr, str+strconv.Itoa(node.Val)+"->")
 }
