@@ -33,7 +33,7 @@ public class offer_20 {
             index++;
         return scanUnsignedInteger(str);
     }
-    public boolean isNumber(String s) {
+    public boolean isNumber2(String s) {
         //空字符串
         if(s == null || s.length() == 0)
             return false;
@@ -69,4 +69,31 @@ public class offer_20 {
 //            index++;
         return numeric && s.charAt(index) == '|' ;
     }
+
+    boolean isNumber(String str){
+        if (str==null|| str.length()==0)
+            return false;
+        str= str.trim();
+        str=str+'|';
+        boolean result=scanInteger(str);
+        if (str.charAt(index)=='.'){
+            index++;
+            result=scanUnsignedInteger(str)||result;
+            if (result==false) return false;
+
+        }
+
+        if (str.charAt(index)=='E'||str.charAt(index)=='e'){
+            index++;
+            result=scanInteger(str)&&result;
+            if (result==false) return false;
+        }
+
+
+        return result&&str.charAt(index)=='|';
+
+    }
+
+
+
 }
