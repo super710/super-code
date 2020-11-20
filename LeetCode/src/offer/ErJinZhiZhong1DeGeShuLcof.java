@@ -15,6 +15,8 @@ public class ErJinZhiZhong1DeGeShuLcof {
      * 对于二进制数，借鉴对n取模时，可以&n-1的思想，将只n = n&n-1，即
      * 00001000 & 00000111，将会消掉n最右边的一个1，循环遍历直到n = 0，
      * 此时输出1的个数
+     *
+     * Integer.bitCount()可以直接运算，源码中使用移位操作实现的计算，0ms实现
      */
 
     // you need to treat n as an unsigned value
