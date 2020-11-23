@@ -1,4 +1,4 @@
-
+package List;
 
 
 //题目：给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。返回删除后的链表的头节点
@@ -14,7 +14,7 @@ class ListNode {
 
 public class DeleteNode {
     public static void main(String[] args) {
-        ListNode head = new ListNode(4);
+       ListNode head = new ListNode(4);
         head.next=new ListNode(5);
         head.next.next=new ListNode(1);
         head.next.next.next=new ListNode(9);
