@@ -34,6 +34,15 @@ class TreeNode {
 public class SubStructure {
 
    //先序遍历A中每个节点,并与B比较
+
+    /**
+     *特例处理： 当 树 AA 为空 或 树 BB 为空 时，直接返回 falsefalse ；
+     * 返回值： 若树 BB 是树 AA 的子结构，则必满足以下三种情况之一，因此用或 || 连接；
+     * 1.以 节点 AA 为根节点的子树 包含树 BB ，对应 recur(A, B)；
+     * 2.树 BB 是 树 AA 左子树 的子结构，对应 isSubStructure(A.left, B)；
+     * 3.树 BB 是 树 AA 右子树 的子结构，对应 isSubStructure(A.right, B)；
+     * @return
+     */
     public static boolean isSubStructure(TreeNode A, TreeNode B) {
         if(A==null||B==null)
             return false;
@@ -51,6 +60,17 @@ public class SubStructure {
 
 
     //判断A中是否包含B
+
+    /**
+     * 终止条件：
+     * 1、当节点B为空：说明树B已匹配完成，返回true
+     * 2、当A节点为空：匹配失败，返回false
+     * 3、节点A和B不相同，匹配失败false
+     *
+     * return
+     * 1、判断A和B的左子节点是否相等，即recur(A.left,B.left)
+     * 2、判断A和B的右子节点是否相等，即recur(A.right,B.right)
+     */
     static boolean  recur(TreeNode A, TreeNode B) {
         if(B == null) return true;
         if(A == null || A.val != B.val) return false;
