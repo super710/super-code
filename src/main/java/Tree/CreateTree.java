@@ -4,7 +4,7 @@ public class CreateTree {
 
     static  int i =0;
     //根据int数组，前序遍历创建二叉树
-    public static TreeNode createBinTree(int array[], int num) {
+    public static TreeNode createBinTree(Integer array[], int num) {
         //根节点为第一个数
         TreeNode root = new TreeNode(array[num]);
         // 左孩子
@@ -29,7 +29,7 @@ public class CreateTree {
     }
 
     public static void main(String[] args) {
-        int a[] = {4,2,7,1,3,6,9};
+        Integer a[] = {4,2,7,1,3,6,9};
         TreeNode tree = createBinTree(a, 0);
 
         //前序遍历

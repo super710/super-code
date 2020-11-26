@@ -56,7 +56,7 @@ public class MirrorTree {
 
     @Test
     public void test(){
-        int num[]={4,2,7,1,3,6,9};
+        Integer num[]={4,2,7,1,3,6,9};
         TreeNode tree = CreateTree.createBinTree(num, 0);
         tree= mirrorTree(tree);
         CreateTree.preOrder(tree);
