@@ -64,6 +64,7 @@ public class ZhanDeYaRuTanChuXuLieLcof {
     }
 
     public static void main(String[] args) {
+        System.out.println(validateStackSequences(new int[]{1, 0, 3, 2}, new int[]{0, 1, 2, 3}));
         System.out.println(validateStackSequences1(new int[]{1, 0, 3, 2}, new int[]{0, 1, 2, 3}));
     }
 }
