@@ -18,7 +18,7 @@ public class 从上到下打印二叉树II {
         ArrayList<List<Integer>> lists = new ArrayList<>();
         while (!treeNodes.isEmpty()){
             ArrayList<Integer> integers = new ArrayList<>();
-            
+
 
             lists.add(integers);
         }
