@@ -39,17 +39,20 @@ public class _75_颜色分类 {
 
 
     public void sortColors2(int[] nums) {
+        //2 0 2 0 1 1
         int left = 0;
         int right = nums.length - 1;
-
-        for (int i = 0; i <= right; i++) {
-            while (2 == nums[i] && i < right) {
-                swap(i, right, nums);
-                right--;
-            }
+        int i = 0;
+        while (i <= right) {
             if (0 == nums[i]) {
-                swap(i, left, nums);
+                swap(left, i, nums);
                 left++;
+                i++;
+            } else if (1 == nums[i]) {
+                i++;
+            } else {
+                swap(right, i, nums);
+                right--;
             }
         }
     }

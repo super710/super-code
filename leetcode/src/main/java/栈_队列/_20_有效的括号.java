@@ -1,4 +1,4 @@
-package 栈;
+package 栈_队列;
 
 import java.util.Stack;
 
@@ -50,4 +50,5 @@ public class _20_有效的括号 {
         }
         return characterStack.empty();
     }
+
 }

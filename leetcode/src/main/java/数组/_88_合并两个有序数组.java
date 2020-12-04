@@ -45,8 +45,16 @@ public class _88_合并两个有序数组 {
     }
 
     public void merge3(int[] nums1, int m, int[] nums2, int n) {
-        System.arraycopy(nums2, 0, nums1, m, n);
-        Arrays.sort(nums1);
+        int num1 = m - 1;
+        int num2 = n - 1;
+        int cur = nums1.length - 1;
+        while (0 <= num2) {
+            if (num1 >= 0 && nums1[num1] > nums2[num2]) {
+                nums1[cur--] = nums1[num1--];
+            } else {
+                nums1[cur--] = nums2[num2--];
+            }
+        }
     }
 
 }

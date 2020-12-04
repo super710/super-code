@@ -12,6 +12,7 @@ public class 剑指_Offer_24_反转链表 {
      *
      * @param head 头结点
      * @return 返回新的头结点
+     * 1->2->3->4->null
      */
     public ListNode reverseList1(ListNode head) {
         if (null == head || null == head.next) {

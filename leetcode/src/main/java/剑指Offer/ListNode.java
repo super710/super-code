@@ -1,4 +1,4 @@
-package 链表;
+package 剑指Offer;
 
 public class ListNode {
         int val;
