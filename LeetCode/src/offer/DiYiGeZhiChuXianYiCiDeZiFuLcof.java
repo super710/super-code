@@ -30,7 +30,7 @@ public class DiYiGeZhiChuXianYiCiDeZiFuLcof {
     }
 
     /**
-     * 利用有序hashmap，进行查找
+     * 利用有序hashmap-->LinkedHashMap，进行查找
      */
     public static char firstUniqChar1(String s) {
         HashMap<Character, Boolean> dic = new LinkedHashMap<>();
@@ -47,7 +47,7 @@ public class DiYiGeZhiChuXianYiCiDeZiFuLcof {
      * 直接利用hashmap进行查找，两次循环字符串s
      */
     public static char firstUniqChar2(String s) {
-        HashMap<Character, Boolean> dic = new LinkedHashMap<>();
+        HashMap<Character, Boolean> dic = new HashMap<>();
         char[] sc = s.toCharArray();
         for(char c : sc)
             dic.put(c, !dic.containsKey(c));
