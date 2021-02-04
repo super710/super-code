@@ -1,5 +1,7 @@
 package Tree;
 
+import org.junit.Test;
+
 public class CreateTree {
 
     static  int i =0;
@@ -28,13 +30,27 @@ public class CreateTree {
         preOrder(TreeNode.right);
     }
 
+    public void postOrder(TreeNode node){
+        if(node == null)
+            return;
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.val + " ");
+
+    }
     public static void main(String[] args) {
         Integer a[] = {4,2,7,1,3,6,9};
         TreeNode tree = createBinTree(a, 0);
 
         //前序遍历
         preOrder(tree);
-        
 
+    }
+
+    @Test
+    public void testPostOrder(){
+        Integer a[] = {1,2,3,4,5,6};
+        TreeNode tree = createBinTree(a, 0);
+        postOrder(tree);
     }
 }
