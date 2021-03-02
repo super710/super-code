@@ -40,14 +40,14 @@ public class BaShuZuPaiChengZuiXiaoDeShuLcof {
         if (left >= right){
             return;
         }
-        String pio = strs[left];
+        String pivot = strs[left];
         int i = left;
         int j = right;
         while (i < j){
-            while (i < j && (pio + strs[j]).compareTo(strs[j] + pio) < 0){
+            while (i < j && (pivot + strs[j]).compareTo(strs[j] + pivot) < 0){
                 j--;
             }
-            while (i < j && (pio + strs[i]).compareTo(strs[i] + pio) >= 0){
+            while (i < j && (pivot + strs[i]).compareTo(strs[i] + pivot) >= 0){
                 i++;
             }
             String temp = strs[j];
@@ -55,7 +55,7 @@ public class BaShuZuPaiChengZuiXiaoDeShuLcof {
             strs[i] = temp;
         }
         strs[left] = strs[j];
-        strs[j] = pio;
+        strs[j] = pivot;
         fastSort(strs, left, j - 1);
         fastSort(strs, j + 1, right);
     }
